@@ -48,5 +48,12 @@ check_complex_struct(
 	[{ a => '', b => SKIP }],
 	'key_15'
 );
-
+#
+# custom array
+#
+check_complex_struct(
+	[ 1, 2, 3 ],
+	[ { EQ, 1 }, { EQ, 2 }, '' ],
+	'custom array'
+);
 done_testing;
